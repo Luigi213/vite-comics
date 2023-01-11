@@ -5,7 +5,6 @@
 }
 
 @mixin align {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,4 +13,9 @@
 @mixin cardSize {
     width: 30%;
     height: 50%;
+}
+
+@mixin infoList {
+    color: #a8aeae;
+    font-size: 13px;
 }

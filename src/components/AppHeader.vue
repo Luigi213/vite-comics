@@ -80,7 +80,6 @@ export default {
                 @include display;
             }
             ul{
-                list-style: none;
                 display: flex;
                 li{
                     padding: 1rem;
@@ -91,8 +90,7 @@ export default {
                     a{  
                         padding-bottom: 43px ;
                         color: $secondary;                        
-                        text-decoration: none;
-                        font-size: 11px;
+                        font-size: 10px;
                         font-weight: 600;
                     }
     
