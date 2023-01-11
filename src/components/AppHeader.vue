@@ -54,7 +54,9 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-content">
-                    <img src="../assets/images/dc-logo.png" alt="logo">
+                    <div class="image">
+                        <img src="../assets/images/dc-logo.png" alt="logo">
+                    </div>
                     <ul>
                         <li v-for="(listname, index) in listNavbar" :key="index" :class="listname.active ? 'active' : ''">
                             <a href="/">{{ listname.type }}</a>
@@ -70,8 +72,12 @@ export default {
     @use '../styles/partials/mixins' as *;
     header{
         .col-content{
+            margin: 15px;
             @include displayHeader;
-            margin: 2rem 0;
+            .image{
+                width: 80px;
+                @include displayHeader;
+            }
             ul{
                 list-style: none;
                 display: flex;
@@ -82,10 +88,10 @@ export default {
                         border-bottom: 5px solid $primary ;
                     }
                     a{  
-                        padding-bottom: 42px ;
+                        padding-bottom: 43px ;
                         color: $secondary;                        
                         text-decoration: none;
-                        font-size: 13px;
+                        font-size: 11px;
                         font-weight: 600;
                     }
     
