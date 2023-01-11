@@ -73,10 +73,11 @@ export default {
     header{
         .col-content{
             margin: 15px;
-            @include displayHeader;
+            @include display;
             .image{
                 width: 80px;
-                @include displayHeader;
+                height: 80px;
+                @include display;
             }
             ul{
                 list-style: none;

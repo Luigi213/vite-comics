@@ -1,5 +1,17 @@
-@mixin displayHeader {
+@mixin display {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin align {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin cardSize {
+    width: 30%;
+    height: 50%;
 }

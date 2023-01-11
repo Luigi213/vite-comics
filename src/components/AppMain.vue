@@ -5,17 +5,18 @@ export default {
 </script>
 <template>
     <main>
-        <div>
+        <div class="container">
             <h1>Content goes here</h1>
         </div>
     </main>
 </template>
 <style lang="scss">
     @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins' as *;
     main{
         background-color: #1C1C1C ;
         h1{
-            padding: 5rem;
+            padding: 5rem 2rem;
             color: $tertiary
         }
     }
