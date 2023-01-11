@@ -34,7 +34,7 @@ export default {
         <section class="bg-footer-nav">
             <div class="container-footer">
                 <div class="card" v-for="(card,index) in cards" :key="index">
-                    <div class="icons">
+                    <div class="card-image">
                         <img :src="`/src/assets/images/${card.images}`">
                     </div>
                     <span>{{ card.title }}</span>                    
@@ -43,7 +43,7 @@ export default {
         </section>
         <section class="middle-footer">
             <div class="container">
-                <div class="row-footer">
+                <div class="row-footer-middle">
                     <div class="info">
                         <h3>DC COMICS</h3>
                         <ul>
@@ -88,7 +88,22 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <div class="jumbotron">
+            </div>
+        </section>
+        <section class="bottom-footer">
+            <div class="container">
+                <div class="row-footer-bottom">
+                    <button>SIGN-UP NOW</button>
+                    <div class="icons">
+                        <h3>FOLLOW US</h3>
+                        <div class="icon">
+                            <img src="../assets/images/footer-facebook.png" alt="logo-facebook">
+                            <img src="../assets/images/footer-twitter.png" alt="logo-twitter">
+                            <img src="../assets/images/footer-youtube.png" alt="logo-youtube">
+                            <img src="../assets/images/footer-pinterest.png" alt="logo-pinterest">
+                            <img src="../assets/images/footer-periscope.png" alt="logo-periscope">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,7 +123,7 @@ export default {
                 .card{                
                     width: calc(100% / 5);
                     @include align;
-                    &:last-child .icons{
+                    &:last-child .card-image{
                         margin-right: 10px 
                     }
                     span{
@@ -116,7 +131,7 @@ export default {
                         font-size: 11px;
                         color: $tertiary;
                     }
-                    .icons{ 
+                    .card-image{ 
                         @include cardSize;
                     }
                 }
@@ -127,7 +142,7 @@ export default {
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
-            .row-footer{
+            .row-footer-middle{
                 display: flex;
                 .info{
                     margin: 2rem 2rem 4rem 0;
@@ -147,6 +162,33 @@ export default {
                 background: url(../assets/images/dc-logo-bg.png);
                 background-repeat: no-repeat;
                 background-position: right;
+            }
+        }
+        .bottom-footer{
+            background-color: #303030;
+            padding: 2rem 0;
+            .row-footer-bottom{
+                @include display;
+                button{
+                    border:2px solid $primary ;
+                    color: $tertiary;
+                    padding: 1rem;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+                .icons{
+                    width: 33%;
+                    color: $primary;
+                    @include display;
+                    h3{
+                        font-size: 17px;
+                    }
+                    .icon{
+                        img{
+                            padding-left: 1rem;
+                        }
+                    }
+                }
             }
         }
     }
