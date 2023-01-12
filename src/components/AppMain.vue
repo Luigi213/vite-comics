@@ -87,9 +87,20 @@ export default {
 </script>
 <template>
     <main>
-        <div class="jumbotron"></div>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="Series">
+                    <h1>CURRENT SERIES</h1>
+                </div>
+            </div>            
+        </div>
         <div class="container">
-            <CardaDc v-for="(dc,index) in dcSeries" :key="index" :dcImage="dc" />
+            <div class="mb-t">
+                <CardaDc v-for="(dc,index) in dcSeries" :key="index" :dcImage="dc" />            
+            </div>
+            <div class="btn">
+                <button>LOAD MORE</button>
+            </div>
         </div>
     </main>
 </template>
@@ -101,11 +112,38 @@ export default {
         .jumbotron{
             height: 400px;
             background-image: url(../assets/images/jumbotron.jpg);
-            background-position-x: center;            
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: top, center;    
+            position: relative;   
         }
         .container{
-            display: flex;
-            flex-wrap: wrap;
+            .mb-t{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 25px 0;
+            }
+        }
+        .Series{
+            color: $tertiary;
+            position: absolute;  
+            top: 94.5%;
+            background-color: $primary;
+            padding: 0.5rem 1.5rem;
+            h1{
+                font-size: 25px
+            }
+        }
+        .btn{
+            @include align;
+            color: $tertiary;
+            padding-bottom: 1.5rem ;
+            button{
+                background-color: $primary;
+                padding: 1rem 4rem;       
+                cursor: pointer;     
+            }
         }
     }
 </style>
