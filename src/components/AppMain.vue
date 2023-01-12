@@ -10,7 +10,7 @@ export default {
         </div>
     </main>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
     main{
