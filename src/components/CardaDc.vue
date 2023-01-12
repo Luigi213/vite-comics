@@ -5,15 +5,27 @@ export default {
     } 
 }
 </script>
-<template lang="">
+<template>
     <div class="card">
-        {{ dcImage.series }}
+        <div class="card-image">
+            <img :src="dcImage.thumb" :alt="dcImage.series">
+        </div>
+        {{dcImage.series}}
     </div>
 </template>
 <style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
-    @use '../styles/partials/mixins' as *;
     .card{
-        color: $tertiary
+        color: $tertiary;
+        width: calc(100% / 6 - 30px);
+        margin: 15px;
+        .card-image{
+            img{
+                width: 100%;
+                height: 175px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
     }
 </style>
