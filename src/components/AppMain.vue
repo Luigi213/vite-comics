@@ -124,25 +124,25 @@ export default {
                 width: 100%;
                 padding: 25px 0;
             }
-        }
-        .Series{
-            color: $tertiary;
-            position: absolute;  
-            top: 94.5%;
-            background-color: $primary;
-            padding: 0.5rem 1.5rem;
-            h1{
-                font-size: 25px
-            }
-        }
-        .btn{
-            @include align;
-            color: $tertiary;
-            padding-bottom: 1.5rem ;
-            button{
+            .Series{
+                color: $tertiary;
+                position: absolute;  
+                top: 94.5%;
                 background-color: $primary;
-                padding: 1rem 4rem;       
-                cursor: pointer;     
+                padding: 0.5rem 1.5rem;
+                h1{
+                    font-size: 25px
+                }
+            }
+            .btn{
+                @include align;
+                color: $tertiary;
+                padding-bottom: 1.5rem ;
+                button{
+                    background-color: $primary;
+                    padding: 1rem 4rem;       
+                    cursor: pointer;     
+                }
             }
         }
     }
